@@ -1,0 +1,13 @@
+.about {
+    @extend %section;
+    color: $color_1;
+    
+
+    .container {
+       
+        @include media(768px) {
+            justify-content: space-between;
+        }
+
+    }
+}

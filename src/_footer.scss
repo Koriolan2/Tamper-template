@@ -1,0 +1,24 @@
+.footer {
+    @extend %section;
+    background-color: $color_1;
+    color: $color_4;
+    min-height: calc(512px / 2);
+    
+    .container {
+        row-gap: 33px;
+
+        @include media(768px) {
+            justify-content: space-between;
+        }
+
+        &__item {
+                    
+            &:last-child{
+                @include media(768px) {
+                    width: 45%;
+                    align-items: flex-end;
+                } 
+            }
+        }
+    }
+}

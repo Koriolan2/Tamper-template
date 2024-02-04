@@ -1,0 +1,12 @@
+.apps_2 {
+    @extend %section;
+    @extend %bg;
+    background-image: url(../img/app2_bg.jpg);
+    color: $color_4;
+    
+    .container {       
+        @include media(768px) {
+           justify-content: flex-end;                
+        }
+    }
+}

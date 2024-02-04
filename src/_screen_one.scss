@@ -1,0 +1,14 @@
+.screen-one {
+    @extend %section;
+    @extend %bg;
+    min-height: 100vh;
+    @include bg_overlay('../img/section_bg01.jpg',rgba(0,0,0,0.5) );
+    color: $color_4;
+    
+    .container {
+        
+        @include media(768px) {
+            justify-content: flex-end;
+        }
+    }
+}

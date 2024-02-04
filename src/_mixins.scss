@@ -1,0 +1,50 @@
+@mixin media($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
+
+%section {
+    min-height: 100vh;
+    padding: 100px 0;
+    display: flex;
+    
+    @include media(768px) {
+        min-height: 512px;
+    }
+}
+
+%containers {
+    padding: 0 15px;
+    max-width: 970px;
+    width: 100%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction:column;
+}
+
+%bg {
+    background: {
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+    }
+}
+
+%bg2 {
+    background: {
+        repeat: no-repeat;
+        position: center top;        
+    }
+}
+
+@mixin bg_overlay($img, $color){
+    background: {
+        image: url($img);
+        color: $color;
+        blend-mode: overlay;
+    };
+    @include media(768px) {
+        background-color: transparent;
+    }
+}

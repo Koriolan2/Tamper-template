@@ -1,0 +1,29 @@
+.container {
+   
+    @extend %containers;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    row-gap: 66px;
+    
+    @include media(768px) {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        row-gap: 33px;
+
+        @include media(540px) {
+            width: 70%;                
+        }
+        
+        @include media(768px) {
+            width: 45%;
+            align-items: flex-start;
+        }
+    }
+}
